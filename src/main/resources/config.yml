@@ -1,0 +1,115 @@
+#%msttituls_count%
+
+database:
+  host: "localhost"
+  port: 3306
+  database: "mydatabase"
+  username: "root"
+  password: ""
+
+redis:
+  host: "127.0.0.1"
+  port: 6379
+  username: ""  # Если не используется, оставьте пустым
+  password: ""  # Если не используется, оставьте пустым
+  cache_enabled: false  # Флаг включения кэширования
+
+settings:
+  menu-title: "&#C9E4DEʟ&#CBE1E0ʏ&#CDDFE2ɴ&#CFDCE4x&#D1DAE6ᴛ&#D3D7E8ɪ&#D5D5EAᴛ&#D7D2ECᴜ&#D9D0EEʟ&#DBCDF0s &f&l> &r&fТитулы"
+  menu-size: 54
+  command: "luckperms user %player% meta setsuffix \" %titul%\""
+  clear-command: "luckperms user %player% meta clear"
+  price: 200
+messages:
+  prefix: "(!) "
+  noperm: "У вас нет прав"
+  reload: "Плагин перезагружен"
+  playernotfind: "Игрок %player%&f не найден"
+  myself: "Нельзя дарить титул самому себе"
+  give:
+    give: "Введите ник игрока в чат, которому хотите выдать титул %titul%&r (или 'cancel' для отмены действия)"
+    gived: "Вы подарили титул &f%titul%&r игроку %player%"
+    gived-target: "Вам подарили титул &f%titul%&r (от %player%&r)"
+    cancel: "Вы отменили подарок"
+  buy:
+    buy: "Введите в чат свой титул (или 'cancel' для отмены покупки)"
+    success: "Вы успешно купили титул %titul%"
+    cancel: "Вы отменили покупку титула"
+    no-enough: "У вас недостаточно поинтов (%balance% < %price%)"
+items:
+  titulItem:
+    name: "&#C9E4DEТитул &8▸ &r%titul%"
+    material: sentry_armor_trim_smithing_template
+    lore: #%titul%
+      - ''
+      - '&7Используйте данный титул, чтобы'
+      - '&7выделиться из серой массы игроков'
+      - ''
+      - '&#C9E4DE▸ Нажмите, чтобы установить титул'
+    slot: #можно указывать диапазоны (10-15) так и отдельные слоты
+      - 10-16
+      - 19-25
+      - 28-34
+  notExist:
+    name: "&7У вас нет титулов"
+    material: BELL
+    lore:
+      - ""
+      - "&fТы можешь приобрести его"
+      - "&fнажав на этот колокол!"
+      - ""
+    slot:
+      - 22
+  infoItem:
+    name: "&#C9E4DEИнфо"
+    material: BOOK
+    lore:
+      - ""
+      - "&fДля установки титула"
+      - "&fнужно нажать на него &#C9E4DE&lПКМ/ЛКМ"
+      - ""
+      - "&fТакже ты можешь подарить"
+      - "&fтитул своему напарнику"
+      - "&fнажав по титулу &#C9E4DE&lQ&f"
+      - "&f(клавиша выброса)"
+      - ""
+    slot:
+      - 49
+  buyItem:
+    name: "&#C9E4DEКупить титул"
+    material: PAPER
+    lore:
+      - ""
+      - "&fДля покупки титула нажми"
+      - "&fи введи в чат свой новый титул"
+      - ""
+      - "&fЦена: &#C9E4DE&l%price%&f поинтов"
+      - ""
+    slot:
+      - 48
+  clearItem:
+    name: "&#C9E4DEОчистить титулы"
+    material: CLAY_BALL
+    lore:
+      - ""
+      - "&fНажми для очистки титула"
+    slot:
+      - 50
+  fillItem:
+    name: "&f"
+    material: LIGHT_BLUE_STAINED_GLASS_PANE
+    lore:
+      - ""
+    slot:
+      - 36-44
+      # - 0-8
+      # - 9
+      # - 17
+      # - 18
+      # - 26
+      # - 27
+      # - 35
+      # - 36
+      # - 44
+      # - 45-47
+      # - 51-53

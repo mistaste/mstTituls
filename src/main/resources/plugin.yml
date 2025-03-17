@@ -1,0 +1,10 @@
+name: mstTituls
+version: '${project.version}'
+main: ua.kusarigama.msttituls.main
+api-version: '1.20'
+commands:
+  msttitul:
+    aliases:
+      - mtitul
+      - mtituls
+      - mstt
